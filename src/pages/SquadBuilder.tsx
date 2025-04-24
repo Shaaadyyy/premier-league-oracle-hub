@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -621,3 +622,127 @@ const SquadBuilder = () => {
                               <td className="px-2 py-2 text-center">
                                 <Button 
                                   size="sm"
+                                  variant="outline"
+                                  className="hover:bg-red-100 hover:text-red-700 hover:border-red-300"
+                                  onClick={() => removePlayer(player.id)}
+                                >
+                                  Remove
+                                </Button>
+                              </td>
+                            </tr>
+                          ))}
+                          
+                          {selectedDEF.length === 0 && (
+                            <tr>
+                              <td colSpan={6} className="px-4 py-8 text-center text-gray-500">
+                                No defenders selected yet.
+                              </td>
+                            </tr>
+                          )}
+                        </tbody>
+                      </table>
+                    </div>
+                  </TabsContent>
+                  
+                  <TabsContent value="mid">
+                    <div className="overflow-x-auto">
+                      <table className="w-full">
+                        <thead className="text-xs uppercase bg-gray-50 text-gray-600">
+                          <tr>
+                            <th className="px-2 py-2 text-left">Name</th>
+                            <th className="px-2 py-2 text-left">Team</th>
+                            <th className="px-2 py-2 text-right">Price</th>
+                            <th className="px-2 py-2 text-center">Points</th>
+                            <th className="px-2 py-2 text-right">Form</th>
+                            <th className="px-2 py-2 text-center">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {selectedMID.map((player) => (
+                            <tr key={player.id} className="border-t hover:bg-gray-50">
+                              <td className="px-2 py-2 font-medium">{player.name}</td>
+                              <td className="px-2 py-2">{player.team}</td>
+                              <td className="px-2 py-2 text-right">£{player.price}m</td>
+                              <td className="px-2 py-2 text-center">{player.points}</td>
+                              <td className="px-2 py-2 text-right">{player.form}</td>
+                              <td className="px-2 py-2 text-center">
+                                <Button 
+                                  size="sm"
+                                  variant="outline"
+                                  className="hover:bg-red-100 hover:text-red-700 hover:border-red-300"
+                                  onClick={() => removePlayer(player.id)}
+                                >
+                                  Remove
+                                </Button>
+                              </td>
+                            </tr>
+                          ))}
+                          
+                          {selectedMID.length === 0 && (
+                            <tr>
+                              <td colSpan={6} className="px-4 py-8 text-center text-gray-500">
+                                No midfielders selected yet.
+                              </td>
+                            </tr>
+                          )}
+                        </tbody>
+                      </table>
+                    </div>
+                  </TabsContent>
+                  
+                  <TabsContent value="fwd">
+                    <div className="overflow-x-auto">
+                      <table className="w-full">
+                        <thead className="text-xs uppercase bg-gray-50 text-gray-600">
+                          <tr>
+                            <th className="px-2 py-2 text-left">Name</th>
+                            <th className="px-2 py-2 text-left">Team</th>
+                            <th className="px-2 py-2 text-right">Price</th>
+                            <th className="px-2 py-2 text-center">Points</th>
+                            <th className="px-2 py-2 text-right">Form</th>
+                            <th className="px-2 py-2 text-center">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {selectedFWD.map((player) => (
+                            <tr key={player.id} className="border-t hover:bg-gray-50">
+                              <td className="px-2 py-2 font-medium">{player.name}</td>
+                              <td className="px-2 py-2">{player.team}</td>
+                              <td className="px-2 py-2 text-right">£{player.price}m</td>
+                              <td className="px-2 py-2 text-center">{player.points}</td>
+                              <td className="px-2 py-2 text-right">{player.form}</td>
+                              <td className="px-2 py-2 text-center">
+                                <Button 
+                                  size="sm"
+                                  variant="outline"
+                                  className="hover:bg-red-100 hover:text-red-700 hover:border-red-300"
+                                  onClick={() => removePlayer(player.id)}
+                                >
+                                  Remove
+                                </Button>
+                              </td>
+                            </tr>
+                          ))}
+                          
+                          {selectedFWD.length === 0 && (
+                            <tr>
+                              <td colSpan={6} className="px-4 py-8 text-center text-gray-500">
+                                No forwards selected yet.
+                              </td>
+                            </tr>
+                          )}
+                        </tbody>
+                      </table>
+                    </div>
+                  </TabsContent>
+                </Tabs>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SquadBuilder;
