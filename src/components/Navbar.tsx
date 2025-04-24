@@ -30,7 +30,7 @@ const Navbar = () => {
               alt="FantaSawy Logo" 
               className="h-10 w-auto"
             />
-            <span className="font-bold text-xl hidden md:inline">FantaSawy</span>
+            <span className="font-bold text-xl hidden md:inline">Fantasawy</span>
           </Link>
         </div>
         
@@ -51,7 +51,7 @@ const Navbar = () => {
           <Link to="/squad-builder" className="hover:text-pl-green transition-colors">
             Squad Builder
           </Link>
-          <Button variant="outline" className="bg-pl-green text-pl-purple hover:bg-white">
+          <Button variant="outline" className="bg-pl-green text-pl-purple hover:bg-green-400">
             Sign In
           </Button>
         </div>

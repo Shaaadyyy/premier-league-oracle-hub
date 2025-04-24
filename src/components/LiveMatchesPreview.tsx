@@ -97,7 +97,7 @@ const LiveMatchesPreview = () => {
             </div>
           )}
           
-          <Button variant="outline" className="w-full border-pl-purple/20 hover:border-pl-green hover:text-pl-green">
+          <Button variant="outline" className="w-full border-pl-purple/20 hover:bg-gray-200">
             {match.status === 'LIVE' ? 'View Match Details' : 'Set Reminder'}
           </Button>
         </div>
