@@ -62,7 +62,7 @@ const Navbar = () => {
             variant="ghost" 
             size="icon" 
             onClick={toggleMenu} 
-            className="text-white hover:text-pl-green"
+            className="text-white hover:bg-pl-green"
           >
             <Menu size={24} />
           </Button>
@@ -114,7 +114,7 @@ const Navbar = () => {
               Squad Builder
             </Link>
             <div className="py-3 mt-2">
-              <Button className="w-full bg-pl-green text-pl-purple hover:bg-white">
+              <Button className="w-full bg-pl-green text-pl-purple hover:bg-green-400">
                 Sign In
               </Button>
             </div>
